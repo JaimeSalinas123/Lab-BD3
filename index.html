@@ -2,27 +2,34 @@
 <html lang="en">
 <head>
     <title>SQL-MURDER-MYSTERY</title>
+    <link rel="stylesheet" type="text/css" href="crud.css">
+
 </head>
 <h1>SQLITE</h1>
+<h2>LAB 3 BASE DE DATOS</h2>
 <body>
-    <h2>Agregar registros</h2>
+    <h3>Agregar registros</h3>
     <form action="create.php" method="POST">
-        NOMBRE:  <input type="text" name="NOMBRE"> FUNCION: <input type="text" name="FUNCION"><br>
+        ID:  <input type="text" name="ID"><br>
+        NOMBRE:  <input type="text" name="NOMBRE"> ROL: <input type="text" name="ROL"><br>
         <button id="crearregistroBtn">Crear registros</button>
     </form>
     <br>
-    <h2>Actualizar registros</h2>
+    <h3>Actualizar registros</h3>
     <form action="update.php" method="POST">
-        ACTUALIZAR ID - REGISTRO: <input type="number" name="id"><br>
-        NUEVO NOMBRE: <input type="text" name="nombre"> NUEVA FUNCION: <input type="text" name="rol"><br>
+        ACTUALIZAR ID - REGISTRO: <input type="text" name="id"><br>
+        NUEVO NOMBRE: <input type="text" name="nombre"> NUEVO ROL: <input type="text" name="ROL"><br>
         <button id="actualizardatosBtn">Actualizar registros</button>
     </form>
     <br>
-    <h2>Eliminar registros</h2>
+    <h3>Eliminar registros</h3>
     <form action="delete.php" method="POST">
-        ELIMINAR REGISTRO: <input type="number" name="id"><br>
+        ELIMINAR REGISTRO: <input type="text" name="id"><br>
         <button id="eliminardatosBtn">Eliminar registros</button>
     </form>
+    <?php include 'LABORATORIO/conexion.php'; ?>
+    <?php include 'LABORATORIO/create.php'; ?>
+    <?php include 'LABORATORIO/update.php'; ?>
+    <?php include 'LABORATORIO/delete.php'; ?>
 </body>
-<link rel="stylesheet" type="text/css" href="crud.css">
 </html>
